@@ -5,21 +5,21 @@
 class Simplecli < Formula
   desc "A simple CLI tool to explain automated deployments"
   homepage "https://github.com/mnkboy"
-  version "1.0.8-beta"
+  version "1.0.9-beta"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mnkboy/simplecli/releases/download/v1.0.8-beta/simplecli_Darwin_x86_64.tar.gz"
-      sha256 "5df1d478c4e272f53fa84d7c9f54c80bffc9d51bafd6af242fe5e1a36b99732f"
+      url "https://github.com/mnkboy/simplecli/releases/download/v1.0.9-beta/simplecli_Darwin_x86_64.tar.gz"
+      sha256 "81f89f1ad6e5bbbf36c4f7353650d6e454f7d4ef205ac8f997acca1dc16dc913"
 
       define_method(:install) do
         bin.install "simplecli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mnkboy/simplecli/releases/download/v1.0.8-beta/simplecli_Darwin_arm64.tar.gz"
-      sha256 "47b25dc0592d9c71ddb4b34bbd4b239c39ec69475fcd758427e063b16565f4d8"
+      url "https://github.com/mnkboy/simplecli/releases/download/v1.0.9-beta/simplecli_Darwin_arm64.tar.gz"
+      sha256 "fd3a1463164fcd7124fc0ac2d7a2454ebf8c25b0b858696395744a0f20cef72e"
 
       define_method(:install) do
         bin.install "simplecli"
@@ -29,15 +29,15 @@ class Simplecli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mnkboy/simplecli/releases/download/v1.0.8-beta/simplecli_Linux_x86_64.tar.gz"
-      sha256 "db823aaf732241d90fa25935f56ebb860d6a348a386f34e2cd13104d3c401f5a"
+      url "https://github.com/mnkboy/simplecli/releases/download/v1.0.9-beta/simplecli_Linux_x86_64.tar.gz"
+      sha256 "aa35fce2ba5f8ca3a6a66e6b24a5eed3c18c481a6f6e841b318ef8e7a3badb47"
       define_method(:install) do
         bin.install "simplecli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mnkboy/simplecli/releases/download/v1.0.8-beta/simplecli_Linux_arm64.tar.gz"
-      sha256 "ff3d4ffc213a83df595ee865dc8094565367df08e9476fc8ca6fd1ec2fef7c37"
+      url "https://github.com/mnkboy/simplecli/releases/download/v1.0.9-beta/simplecli_Linux_arm64.tar.gz"
+      sha256 "5e208ea0e7fd869094abde6f5e35bd2f3ae45a771c90bd03920a8dee5cccc474"
       define_method(:install) do
         bin.install "simplecli"
       end
